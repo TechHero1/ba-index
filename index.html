@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Index de Informações Gerais de Blue Archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index de Informações Gerais de Blue Archive</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://techhero1.github.io/shared/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/solid.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/regular.min.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <style>
+      @font-face {
+        font-family: 'AdwaitaSans-Regular';
+        src: url('https://techhero1.github.io/shared/fonts/adwaita-sans/AdwaitaSans-Regular.ttf') format('truetype');
+      }
+    </style>
+  </head>
+  <body class="font-[AdwaitaSans-Regular] bg-gray-200">
+    <nav class="bg-gray-800 sticky top-0 w-[100%]">
+      <div class="inline-flex gap-4 w-[100%]">
+        <div class="mx-auto p-2 sm:px-6 lg:px-8 text-white text-[1.25rem] basis-9/10 sm:basis-19/20 flex flex-row items-center">
+          Index de Informações Gerais de Blue Archive
+        </div>
+        <div class="block bars-icon float-right p-2 flex items-center text-white text-[1.25rem] basis-1/10 sm:basis-1/20" onclick="changeNavbar(true)">
+          <button class="cursor-pointer py-[0.3rem] px-[0.8rem] rounded-md hover:bg-gray-600">
+            <div class="m-auto"><i class="fa-solid fa-bars"></i></div>
+          </button>
+        </div>
+        <div class="hidden close-icon float-right p-2 flex items-center text-white text-[1.25rem] basis-1/10 sm:basis-1/20" onclick="changeNavbar(false)">
+          <button class="cursor-pointer py-[0.3rem] px-[0.8rem] rounded-md hover:bg-gray-600">
+            <div class="m-auto"><i class="fa-solid fa-close"></i></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="hidden dropdown-menu">
+        <div class="space-y-1 px-2 sm:px-6 pt-2 pb-3 text-right">
+          <a href="" class="block rounded-md bg-gray-500 px-3 py-2 text-base font-medium text-white">Início</a>
+          <a href="eventos" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-600 hover:text-white">Eventos</a>
+          <a href="mangas" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-600 hover:text-white">Mangás</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mx-auto py-2 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="social"><a name="social" class="block relative top-[-5rem]"></a><b>Redes sociais oficiais</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://x.com/Blue_ArchiveJP">Twitter - @Blue_ArchiveJP</a></div>
+            <div><a class="text-blue-500" href="https://x.com/EN_BlueArchive">Twitter - @EN_BlueArchive</a></div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="story"><a name="story" class="block relative top-[-5rem]"></a><b>História</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://ladr.lorearchive.org/en/home">Lore Archive's Dialogue Reader (LADR)</a></div>
+            <div><a class="text-blue-500" href="https://ba.svdex.moe/">Blue Archive Resource Viewer</a> (Memorial Lobby e CGs)</div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="wikis"><a name="wikis" class="block relative top-[-5rem]"></a><b>Wikis</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Main_Page">Blue Archive Wiki</a></div>
+            <div>Blue Archive Wiki Fandom<br><a class="text-blue-500" href="https://breezewiki.com/bluearchive/wiki/Blue_Archive_Wiki">(opção boa)</a> - <a class="text-blue-500" href="https://bluearchive.fandom.com/wiki/Blue_Archive_Wiki">(opção ruim)</a></div>
+            <div><a class="text-blue-500" href="https://schaledb.com/home">Schale DB</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.gg/">BlueArchive.gg</a></div>
+            <div><a class="text-blue-500" href="https://kamigame.jp/bluearchive/index.html">Blue Archive Wiki</a> (kamigame.jp)</div>
+            <div><a class="text-blue-500" href="https://bluearchive.wikiru.jp/">Blue Archive Wiki</a> (wikiru.jp)</div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="banners_personagens"><a name="banners_personagens" class="block relative top-[-5rem]"></a><b>Banners e personagens</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Banner_List">Lista de banners</a> (JP)</div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Banner_List_(Global)">Lista de banners</a> (Global)</div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Characters">Lista de personagens</a></div>
+            <hr>
+            <div><a class="text-blue-500" href="https://docs.google.com/spreadsheets/d/1KZOPcoxPEP8opxs54x4dZn2ecifJZ2_d3kqvVgbSHvQ/edit">Planejamento de pyroxene</a></div>
+            <div><a class="text-blue-500" href="https://hina.loves.midokuni.com/Summary/Banner">Midokuni - Lista de próximos banners</a></div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="seasons"><a name="seasons" class="block relative top-[-5rem]"></a><b>Raids e outros modos de jogo</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid grid-cols-2 gap-4 flex items-stretch">
+            <div>JP</div>
+            <div>Global</div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Total_Assault#tabber-tabpanel-JP-0">Total Assault</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Total_Assault#tabber-tabpanel-Global-0">Total Assault</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Grand_Assault#tabber-tabpanel-JP-0">Grand Assault</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Grand_Assault#tabber-tabpanel-Global-0">Grand Assault</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Limit_Break_Assault#tabber-tabpanel-JP-0">Final Restriction Release</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Limit_Break_Assault#tabber-tabpanel-Global-0">Final Restriction Release</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Joint_Firing_Drill#tabber-Japanese_version">Joint Firing Drill</a></div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Joint_Firing_Drill#tabber-Global_version">Joint Firing Drill</a></div>
+          </div>
+          <div class="my-2 sm:mb-0 sm:mt-5 grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <hr>
+            <div><a class="text-blue-500" href="https://yuzutrends.vercel.app/dashboard/jp">Leaderboards das raids</a></div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="guias"><a name="guias" class="block relative top-[-5rem]"></a><b>Guias gerais</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://docs.google.com/spreadsheets/d/1-lBJa3h4mXHkmuSKohoHe60WVVg1eRG9bA73jHqHzwA/edit?gid=1940133283#gid=1940133283">Bricc Archive Student Skill Level Guide</a></div>
+            <div><a class="text-blue-500" href="https://docs.google.com/document/d/1bvYGwIh-9o-2JQ4Q2MQXtsL0peiCPrRuw0l3HQmTrZ0/edit">Guia geral de estratégias de raid</a></div>
+            <div><a class="text-blue-500" href="https://www.souriki-border.com/">Compilação de homework (vídeos de raid)</a></div>
+            <div><a class="text-blue-500" href="https://docs.google.com/document/d/1x6rm97BmtRJZHCWrz5puFxKZNGPc313bgebiRtjlNnE/edit#heading=h.bj10o4whlw6">Guia de raid Insane</a></div>
+            <div><a class="text-blue-500" href="https://docs.google.com/spreadsheets/d/1VSzm_ioCt2AdRvkfL9HKNNZSbyslayVERXxVxR6nzh4/edit?gid=1010306974#gid=1010306974">stokkie's weirdchamp raid rating</a></div>
+            <div><a class="text-blue-500" href="https://docs.google.com/document/u/0/d/1Ui0FRgG8h8RB1-cA639F3ETDrVM7q9FKftg4vBKBAAQ/mobilebasic?pli=1">ItJustWorks Library of Stats and Formulas</a></div>
+            <div><a class="text-blue-500" href="https://docs.google.com/document/d/1lbXudYH5w3dLdKWxDM4HODZPeuKDRJqOPiU5FkhjvwE/edit?tab=t.0">Guia de PvP</a> (exemplos desatualizados, boa base)</div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="mais_links"><a name="mais_links" class="block relative top-[-5rem]"></a><b>Mais links principais</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://eriduops.com/">EriduOps</a> (bonds, materiais e chibis)</div>
+            <div><a class="text-blue-500" href="https://justin163.com/planner/">Resource Planner</a> (planejamento de recursos)</div>
+            <div><a class="text-blue-500" href="https://ba.joexyz.online/">Joe's Blue Archive Tools</a> (ferramentas)</div>
+            <div><a class="text-blue-500" href="https://arona.icu/searchAssists">Procurar assists</a> (tudo em chinês)</div>
+            <div><a class="text-blue-500" href="https://docs.google.com/spreadsheets/d/1kT6-50X_bJroJip7Ih-DOWzQfIm_WnPW8wjsHthQxvk/edit?gid=1948269731#gid=1948269731">Calculadora de Duração de Crowd Control</a></div>
+            <div><a class="text-blue-500" href="https://hina.loves.midokuni.com/Resources">Midokuni - Recursos gerais</a></div>
+            <div><a class="text-blue-500" href="https://kina-ko-m-ochi.net/">Kinakomochi Tools</a> (ferramentas JP)</div>
+            <div><a class="text-blue-500" href="assets/doc/Estudantes da Red Winter e suas armas.pdf">Estudantes da Red Winter e suas armas</a> (PDF)</div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+            <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="jp_termos"><a name="jp_termos" class="block relative top-[-5rem]"></a><b>Termos em japonês para pesquisa</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-start md:justify-items-center gap-4 flex items-stretch">
+              <div>
+                <table class="border-1 table-auto">
+                  <thead>
+                    <tr>
+                      <th class="border-1 p-2" colspan="2">Modos de jogo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Total Assault</div></td>
+                      <td class="border-1 p-2"><div class="text-center">総力戦</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Grand Assault</div></td>
+                      <td class="border-1 p-2"><div class="text-center">大決戦</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Final Restriction Release</div></td>
+                      <td class="border-1 p-2"><div class="text-center">制約解除決戦</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Joint Firing Drill</div></td>
+                      <td class="border-1 p-2"><div class="text-center">合同火力演習</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Tactical Challenge</div></td>
+                      <td class="border-1 p-2"><div class="text-center">戦術対抗戦</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">-</div></td>
+                      <td class="border-1 p-2"><div class="text-center">仮想適性試験</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div>
+                <table class="border-1 table-auto">
+                  <thead>
+                    <tr>
+                      <th class="border-1 p-2" colspan="2">Raids</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Time / Team / Pan</div></td>
+                      <td class="border-1 p-2"><div class="text-center">凸</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Urban</div></td>
+                      <td class="border-1 p-2"><div class="text-center">市街地</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Outdoors / Field</div></td>
+                      <td class="border-1 p-2"><div class="text-center">屋外</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Indoor</div></td>
+                      <td class="border-1 p-2"><div class="text-center">屋内</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Light Armor</div></td>
+                      <td class="border-1 p-2"><div class="text-center">軽装備</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Special Armor</div></td>
+                      <td class="border-1 p-2"><div class="text-center">特殊装甲</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Elastic Armor</div></td>
+                      <td class="border-1 p-2"><div class="text-center">弾力装甲</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Heavy Armor</div></td>
+                      <td class="border-1 p-2"><div class="text-center">重装甲</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Composite Armor</div></td>
+                      <td class="border-1 p-2"><div class="text-center">複合装甲</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div>
+                <table class="border-1 table-auto">
+                  <thead>
+                    <tr>
+                      <th class="border-1 p-2" colspan="2">Bosses</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Kaitenger: KAITEN FX Mk.0</div></td>
+                      <td class="border-1 p-2"><div class="text-center">カイテンジャー</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Chesed</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ケセド</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Binah</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ビナー</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Hod</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ホド</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Perorodzilla</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ペロロジラ</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Hieronymus</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ヒエロニムス</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">ShiroKuro</div></td>
+                      <td class="border-1 p-2"><div class="text-center">シロクロ</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Goz</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ゴズ</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Gregorius</div></td>
+                      <td class="border-1 p-2"><div class="text-center">グレゴリオ</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Wakamo: Hovercraft</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ホバークラフト</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Myouki Kurokage</div></td>
+                      <td class="border-1 p-2"><div class="text-center">クロカゲ</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Geburah</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ゲブラー</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Yesod</div></td>
+                      <td class="border-1 p-2"><div class="text-center">イェソド</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Set</div></td>
+                      <td class="border-1 p-2"><div class="text-center">セト</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Chokmah</div></td>
+                      <td class="border-1 p-2"><div class="text-center">コクマー</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Tiphareth</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ティファレト</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="text-center">Drumbarka</div></td>
+                      <td class="border-1 p-2"><div class="text-center">ドラム缶ガニ</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+            <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="quant_report"><a name="quant_report" class="block relative top-[-5rem]"></a><b>Quantidade de Activity Reports para maximizar uma personagem</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+              <div>
+                <table class="border-1 table-auto">
+                  <thead>
+                    <tr>
+                      <th class="border-1 p-2">Tipo</th>
+                      <th class="border-1 p-2">Quant.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-1 p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Novice_Report.png" class="w-[auto] h-[3rem] place-self-center"><div class="text-center">Novice</div></div></td>
+                      <td class="border-1 p-2"><div class="text-center">24 000</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Normal_Report.png" class="w-[auto] h-[3rem] place-self-center"><div class="text-center">Normal</div></div></td>
+                      <td class="border-1 p-2"><div class="text-center">2 499</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Advanced_Report.png" class="w-[auto] h-[3rem] place-self-center"><div class="text-center">Advanced</div></div></td>
+                      <td class="border-1 p-2"><div class="text-center">625</div></td>
+                    </tr>
+                    <tr>
+                      <td class="border-1 p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Superior_Report.png" class="w-[auto] h-[3rem] place-self-center"><div class="text-center">Superior</div></div></td>
+                      <td class="border-1 p-2"><div class="text-center">125</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="quant_eleph"><a name="quant_eleph" class="block relative top-[-5rem]"></a><b>Quantidade de Elephs para maximizar uma personagem</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div>
+              <table class="border-1 table-auto">
+                <thead>
+                  <tr>
+                    <th class="border-1 p-2">Raridade</th>
+                    <th class="border-1 p-2">Elephs necessárias</th>
+                    <th class="border-1 p-2">Custo em Eligma</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-yellow-600">★3→4</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">100</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">300</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-yellow-600">★3→5</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">220</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">900</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-yellow-600">★3→UE40</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">340</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">1 500</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-yellow-600">★3→UE50</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">520</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">2 400</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-yellow-600">★3→UE60</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">720</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">3 400</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-red-600">★4→5</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">120</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">400</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-red-600">★4→UE40</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">240</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">1 000</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-red-600">★4→UE50</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">420</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">1 900</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center text-red-600">★4→UE60</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">620</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">2 900</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="affection"><a name="affection" class="block relative top-[-5rem]"></a><b>Utilidades para personagens específicas</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Affection">Lista de afeição</a> (presentes)</div>
+            <div><a class="text-blue-500" href="https://bluearchive.wiki/wiki/Cafe/Furniture">Lista de mobílias e interações</a></div>
+            <div>Listas de artefatos<br><a class="text-blue-500" href="https://breezewiki.com/bluearchive/wiki/Crafting_Chamber/Growth_Material">(opção boa)</a> - <a class="text-blue-500" href="https://bluearchive.fandom.com/wiki/Crafting_Chamber/Growth_Material">(opção ruim)</a></div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <div class="mb-5 group/title cursor-pointer" onclick="copyText(this.getAttribute('data-anchor'))" data-anchor="bond"><a name="bond" class="block relative top-[-5rem]"></a><b>Guia de Bond</b><i class="fa-solid fa-link ml-3 opacity-100 sm:opacity-0 group-hover/title:opacity-100 tranisition ease duration-300"></i></div>
+          <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+            <div>
+              <table class="border-1 table-auto">
+                <thead><tr><th class="border-1 p-2" colspan="5">Reações</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td class="border-1 p-2"><div class="text-center">Toque</div></td>
+                    <td class="border-1 p-2"><div class="text-center">Efeito Pequeno</div></td>
+                    <td class="border-1 p-2"><div class="text-center">Efeito Normal</div></td>
+                    <td class="border-1 p-2"><div class="text-center">Efeito Ótimo</div></td>
+                    <td class="border-1 p-2"><div class="text-center">Efeito Incrível</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Headpat_Icon.png" class="w-[3rem] h-auto place-self-center"><div class="text-center">Meh</div></div></td>
+                    <td class="border-1 sm:p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Small_Effect.png" class="w-[3rem] h-auto place-self-center"><div class="text-center">Meh</div></div></td>
+                    <td class="border-1 sm:p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Normal_Effect.png" class="w-[3rem] h-auto place-self-center"><div class="text-center">Gosta</div></div></td>
+                    <td class="border-1 sm:p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Great_Effect.png" class="w-[3rem] h-auto place-self-center"><div class="text-center">Favorito</div></div></td>
+                    <td class="border-1 sm:p-2"><div class="grid grid-cols-1 gap-0 flex justify-center"><img src="assets/img/Amazing_Effect.png" class="w-[3rem] h-auto place-self-center"><div class="text-center">Ama</div></div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2" rowspan="4"><div class="text-center">+15</div></td>
+                    <td class="border-1 sm:p-2" colspan="4"><div class="text-center">XP do Presente (★★)</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center">+20</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">+40</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">+60</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">+80</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2" colspan="4"><div class="text-center">XP do Presente (★★★)</div></td>
+                  </tr>
+                  <tr>
+                    <td class="border-1 sm:p-2"><div class="text-center">+60</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">+120</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">+180</div></td>
+                    <td class="border-1 sm:p-2"><div class="text-center">+240</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="before:content-['&#8226;'] before:ml-5 before:mr-3">Interactive Furniture (mobílias interativas) aumentam as chances de aparição de uma estudante específica no café.</div>
+            <div class="before:content-['&#8226;'] before:ml-5 before:mr-3">Colocar mais de uma Interactive Furniture no mesmo café acumula as chances, mas a porcentagem adicionada é relativamente menor. A partir da quinta, a chance para de acumular.<sup>[carece de fontes]</sup></div>
+            <div class="before:content-['&#8226;'] before:ml-5 before:mr-3">Remover Interactive Furniture de outras estudantes não desejadas.</div>
+            <div class="before:content-['&#8226;'] before:ml-5 before:mr-3 lg:flex lg:items-center">Se tiver 2 presentes de efeito pequeno (<span class="bg-[url(assets/img/Small_Effect.png)] bg-no-repeat bg-center bg-size-[1.2rem_1.2rem] w-[1.2rem] h-[1.2rem] inline-block"></span>), vale mais a pena usá-los para craftar gift box de 1 presente favorito (<span class="bg-[url(assets/img/Great_Effect.png)] bg-no-repeat bg-center bg-size-[1.2rem_1.2rem] w-[1.2rem] h-[1.2rem] inline-block"></span>).</div>
+            <div class="before:content-['&#8226;'] before:ml-5 before:mr-3">A possibilidade de tocar nas estudantes reseta a cada 3 horas, podendo aumentar o XP múltiplas vezes antes que as visitas mudem.</div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

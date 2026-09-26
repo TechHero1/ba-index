@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Index de Informações Gerais de Blue Archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index de Informações Gerais de Blue Archive</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://techhero1.github.io/shared/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/solid.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/regular.min.css" rel="stylesheet" />
+    <script src="../script.js"></script>
+    <script src="eventos.js"></script>
+    <style>
+      @font-face {
+        font-family: 'AdwaitaSans-Regular';
+        src: url('https://techhero1.github.io/shared/fonts/adwaita-sans/AdwaitaSans-Regular.ttf') format('truetype');
+      }
+    </style>
+  </head>
+  <body class="font-[AdwaitaSans-Regular] bg-gray-200" onload="procurarParam();loadContent()">
+    <nav class="bg-gray-800 sticky top-0 w-[100%]">
+      <div class="inline-flex gap-4 w-[100%]">
+        <div class="mx-auto p-2 sm:px-6 lg:px-8 text-white text-[1.25rem] basis-9/10 sm:basis-19/20 flex flex-row items-center">
+          Index de Informações Gerais de Blue Archive
+        </div>
+        <div class="block bars-icon float-right p-2 flex items-center text-white text-[1.25rem] basis-1/10 sm:basis-1/20" onclick="changeNavbar(true)">
+          <button class="cursor-pointer py-[0.3rem] px-[0.8rem] rounded-md hover:bg-gray-600">
+            <div class="m-auto"><i class="fa fa-bars"></i></div>
+          </button>
+        </div>
+        <div class="hidden close-icon float-right p-2 flex items-center text-white text-[1.25rem] basis-1/10 sm:basis-1/20" onclick="changeNavbar(false)">
+          <button class="cursor-pointer py-[0.3rem] px-[0.8rem] rounded-md hover:bg-gray-600">
+            <div class="m-auto"><i class="fa fa-close"></i></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="hidden dropdown-menu">
+        <div class="space-y-1 px-2 sm:px-6 pt-2 pb-3 text-right">
+          <a href="https://techhero1.github.io/ba-index/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-600 hover:text-white">Início</a>
+          <a href="../eventos" class="block rounded-md bg-gray-500 px-3 py-2 text-base font-medium text-white">Eventos</a>
+          <a href="../mangas" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-600 hover:text-white">Mangás</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mx-auto py-2 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-stretch">
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md evento-conteudo">
+          
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

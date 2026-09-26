@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Index de Informações Gerais de Blue Archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index de Informações Gerais de Blue Archive</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://techhero1.github.io/shared/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/solid.min.css" rel="stylesheet" />
+    <link href="https://techhero1.github.io/shared/fontawesome/css/regular.min.css" rel="stylesheet" />
+    <script src="../script.js"></script>
+    <script src="historia.js"></script>
+    <style>
+      @font-face {
+        font-family: 'AdwaitaSans-Regular';
+        src: url('https://techhero1.github.io/shared/fonts/adwaita-sans/AdwaitaSans-Regular.ttf') format('truetype');
+      }
+
+      .button {
+        background-color: inherit;
+        color: inherit;
+        padding: calc(var(--spacing) * 2);
+        border: 1px solid var(--color-black);
+        border-radius: var(--spacing);
+        cursor: pointer;
+        transition: all;
+        transition-duration: 150ms;
+    }
+
+    .button:hover {
+        background-color: var(--color-gray-200);
+    }
+
+    .button-danger {
+        border-color: 1px solid var(--color-red);
+        color: var(--color-red);
+    }
+
+    .button-danger:hover {
+        background-color: var(--color-red-200);
+    }
+    </style>
+  </head>
+  <body class="font-[AdwaitaSans-Regular] bg-gray-200" onload="procurarParam()">
+    <nav class="bg-gray-800 sticky top-0 w-[100%]">
+      <div class="inline-flex gap-4 w-[100%]">
+        <div class="mx-auto p-2 sm:px-6 lg:px-8 text-white text-[1.25rem] basis-9/10 sm:basis-19/20 flex flex-row items-center">
+          Index de Informações Gerais de Blue Archive
+        </div>
+        <div class="block bars-icon float-right p-2 flex items-center text-white text-[1.25rem] basis-1/10 sm:basis-1/20" onclick="changeNavbar(true)">
+          <button class="cursor-pointer py-[0.3rem] px-[0.8rem] rounded-md hover:bg-gray-600">
+            <div class="m-auto"><i class="fa-solid fa-bars"></i></div>
+          </button>
+        </div>
+        <div class="hidden close-icon float-right p-2 flex items-center text-white text-[1.25rem] basis-1/10 sm:basis-1/20" onclick="changeNavbar(false)">
+          <button class="cursor-pointer py-[0.3rem] px-[0.8rem] rounded-md hover:bg-gray-600">
+            <div class="m-auto"><i class="fa-solid fa-close"></i></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="hidden dropdown-menu">
+        <div class="space-y-1 px-2 sm:px-6 pt-2 pb-3 text-right">
+          <a href="https://techhero1.github.io/ba-index/" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-600 hover:text-white">Início</a>
+          <a href="../eventos" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-600 hover:text-white">Eventos</a>
+          <a href="../mangas" class="block rounded-md bg-gray-500 px-3 py-2 text-base font-medium text-white">Mangás</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mx-auto py-2 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4 flex items-center">
+        <div class="rounded-md p-2 sm:p-5 bg-white shadow-md">
+          <center><div class="mb-5"><b>Dados de <a class="text-blue-500" href="https://github.com/m19e/bluearchive-4panel" target="_blank">m19e/bluearchive-4panel</a></b></div></center>
+          <div class="p-2 w-[100%] flex flex-row-reverse gap-2">
+            <div class="student_filter_dropdown_area md:relative inline-block">
+                <button class="button" onclick="switch_student_filter_dropdown()"><i class="fa-solid fa-filter"></i></button>
+                <div class="student_filter_dropdown absolute right-0 z-10 mt-2 w-[100%] md:w-112 origin-top-right divide-y divide-gray-300 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden hidden">
+                  <div role="none" class="filters py-1 max-h-[400px] overflow-y-auto">
+                    <div class="flex flex-row items-stretch  divide-x divide-gray-300">
+                      <a tabindex="-1" class="w-[100%] block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-150 cursor-pointer text-center border-b border-gray-300" onclick="switch_student('none')">Nenhuma</a>
+                      <a tabindex="-1" class="w-[100%] block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-150 cursor-pointer text-center border-b border-gray-300" onclick="switch_student('all')">Todas</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-stretch text-center historia-conteudo">
+
+          </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
