@@ -154,26 +154,6 @@ function switch_student(student,check_icon) {
     loadContent();
 }
 
-/*function translate_students(students) {
-    let translated_students;
-    let students_string;
-
-    students_string = JSON.stringify(students);
-
-    const all_translations = [
-        ...Object.values(yonkoma.translations.playable),
-        ...Object.values(yonkoma.translations.npc),
-    ];
-
-    for (const { ja, en } of all_translations) {
-        students_string = students_string.replaceAll(`"${ja}"`, `"${en}"`);
-    }
-
-    translated_students = JSON.parse(students_string);
-
-    return translated_students;
-}*/
-
 function switch_student_filter_dropdown() {
   if (document.querySelector(".student_filter_dropdown").classList.contains('hidden')) {
     document.querySelector(".student_filter_dropdown").classList.remove('hidden');
