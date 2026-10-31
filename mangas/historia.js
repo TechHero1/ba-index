@@ -38,11 +38,11 @@ async function procurarParam() {
     }
 
     //fetch playable characters
-    let playable_ja_fetch_object = await fetch("https://raw.githubusercontent.com/m19e/bluearchive-4panel/refs/heads/main/docs/students/playable/ja.json");
+    let playable_ja_fetch_object = await fetch("https://m19e.github.io/bluearchive-4panel/students/playable/ja.json");
     yonkoma.translations = await playable_ja_fetch_object.json();
 
     //fetch npcs
-    let npc_ja_fetch_object = await fetch("https://raw.githubusercontent.com/m19e/bluearchive-4panel/refs/heads/main/docs/students/npc/ja.json");
+    let npc_ja_fetch_object = await fetch("https://m19e.github.io/bluearchive-4panel/students/npc/ja.json");
     yonkoma.translations = Object.assign(yonkoma.translations,await npc_ja_fetch_object.json());
 
     set_filter_default();
@@ -61,12 +61,9 @@ function get_all_students_name(lang,names) {
     let result = [];
     if (lang == "ja") result = Object.keys(yonkoma.translations);
     else {
-        for (let i = 0; i < names.length; i++) {
-            students_selected.push(names[i]);
-
-            let found = names.find((item_found) => item_found === names[i]);
-            if (yonkoma.translations[found] != undefined) result.push(yonkoma.translations[found].en);
-            else result.push(names[i]);
+        for (const name of names) {
+            students_selected.push(name);
+            result.push(yonkoma.translations[name].en) ?? result.push(name);
         }
     }
 
@@ -74,64 +71,50 @@ function get_all_students_name(lang,names) {
 }
 
 function create_student_filters(students_ja,students_en) {
-    for (let i = 0; i < students_ja.length; i++) {
-        document.querySelector(".filters").innerHTML += `
-            <a tabindex="-1" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-150 cursor-pointer" id="${students_ja[i]}" onclick="switch_student('${students_ja[i]}','${students_en[i]}-check')">${students_en[i]}<i class="float-right fa-regular fa-check-square filter-check-icon ${students_en[i]}-check"></i></a>
-        `
-    }
+    const container = document.querySelector(".filters");
+
+    container.insertAdjacentHTML("beforeend", students_ja.map((ja, i) => `
+        <a tabindex="-1" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-150 cursor-pointer" id="${ja}" onclick="switch_student('${ja}','${students_en[i]}-check')">${students_en[i]}<i class="float-right fa-regular fa-check-square filter-check-icon ${students_en[i]}-check"></i></a>
+    `).join(""));
 }
 
 function loadContent() {
-    document.querySelector(".historia-conteudo").innerHTML = "";
+    const container = document.querySelector(".historia-conteudo");
+    const chapters = yonkoma[cur_serie];
+    const cards = [];
 
-    for (var i = 0; i < yonkoma[cur_serie].length; i++) {
-        let chapter_id = yonkoma[cur_serie][i].id;
+    for (const chapter of chapters) {
+        //verifica se cap tem pelo menos alguma das estudantes do filtro
+        const has_student = chapter.students.some(s => students_selected.includes(s));
+        if (!has_student) continue;
 
-        let chapter_title = "";
-        if (yonkoma[cur_serie][i].title != "No Title") chapter_title = yonkoma[cur_serie][i].title;
-
-        let chapter_tweet = yonkoma[cur_serie][i].href;
-
-        let complete_title = "";
-
-        if (chapter_id != "" && chapter_title != "") complete_title = chapter_id+" - "+chapter_title;
-        else complete_title = chapter_id+chapter_title;
+        //titulo mostrado = se diferente de "No Title" ? true, pega do json : false, deixa vazio
+        const chapter_title = chapter.title != "No Title" ? chapter.title : "";
+        //titulo total = se ambos não forem vazios ? true, junta com traço : false, só junta (deixa vazio)
+        const complete_title = (chapter.id != "" && chapter_title != "")
+            ? chapter.id + " - " + chapter_title
+            : chapter.id + chapter_title;
 
         let chapter_students = "";
-        for (var is = 0; is < yonkoma[cur_serie][i].students.length; is++) {
-            //nome jp
-            let cur_student_ja = yonkoma[cur_serie][i].students[is];
+        for (const student_ja of chapter.students) {
+            //usa a key em japones pra pegar a tradução ?? mas se não tiver, continua com o japones
+            const student_en = yonkoma.translations[student_ja]?.en ?? student_ja;
 
-            //all keys
-            let all_students = Object.keys(yonkoma.translations);
-
-            //pega id se key = nome jp
-            let found = all_students.find((item_found) => item_found === cur_student_ja);
-
-            //nome en
-            let cur_student_en;
-            if (yonkoma.translations[found] != undefined) cur_student_en = yonkoma.translations[found].en;
-            else cur_student_en = cur_student_ja;
-
-            chapter_students += `<span class="bg-white border border-gray-300 rounded-md shadow-md py-1 px-2 h-min w-fit break-keep text-base/9" onclick="switch_student('${cur_student_ja}')">${cur_student_en}</span>
-            `
+            chapter_students += `<span class="bg-white border border-gray-300 rounded-md shadow-md py-1 px-2 h-min w-fit break-keep text-base/9" onclick="switch_student('${student_ja}')">${student_en}</span>
+            `;
         }
 
-        let has_student = yonkoma[cur_serie][i].students.some(tags_result => students_selected.includes(tags_result));
-
-        if (has_student) {
-
-        document.querySelector(".historia-conteudo").innerHTML += `
-            <a class="h-[100%]" href="${chapter_tweet}" target="_blank">
+        cards.push(`
+            <a class="h-[100%]" href="${chapter.href}" target="_blank">
                 <div class="h-[100%] p-1 rounded-md m-2 sm:p-5 shadow-md border border-gray-200 cursor-pointer transition-all duration-150 group hover:bg-gray-200">
                     <div class="mb-2">${complete_title}</div>
                     ${chapter_students}
                 </div>
             </a>
-        `
-
-        }
+        `);
     }
+
+    container.innerHTML = cards.join("");
 }
 
 var students_selected = [];
@@ -171,26 +154,25 @@ function switch_student(student,check_icon) {
     loadContent();
 }
 
-function translate_students(students) {
+/*function translate_students(students) {
     let translated_students;
     let students_string;
 
     students_string = JSON.stringify(students);
 
-    //Jogável
-    for (var i = 0; i < Object.keys(yonkoma.translations.playable).length; i++) {
-        students_string = students_string.replace(new RegExp(`\"${yonkoma.translations.playable[Object.keys(yonkoma.translations.playable)[i]].ja}\"`,"gm"),`\"${yonkoma.translations.playable[Object.keys(yonkoma.translations.playable)[i]].en}\"`);
-    }
+    const all_translations = [
+        ...Object.values(yonkoma.translations.playable),
+        ...Object.values(yonkoma.translations.npc),
+    ];
 
-    //NPC
-    for (var i = 0; i < Object.keys(yonkoma.translations.npc).length; i++) {
-        students_string = students_string.replace(new RegExp(`\"${yonkoma.translations.npc[Object.keys(yonkoma.translations.npc)[i]].ja}\"`,"gm"),`\"${yonkoma.translations.npc[Object.keys(yonkoma.translations.npc)[i]].en}\"`);
+    for (const { ja, en } of all_translations) {
+        students_string = students_string.replaceAll(`"${ja}"`, `"${en}"`);
     }
 
     translated_students = JSON.parse(students_string);
 
     return translated_students;
-}
+}*/
 
 function switch_student_filter_dropdown() {
   if (document.querySelector(".student_filter_dropdown").classList.contains('hidden')) {
