@@ -210,10 +210,13 @@ function procurarParam() {
 }
 
 function loadContent() {
-    for (var i = 0; i < evento.lista.length; i++) {
-        if (evento.lista[i].id == eventoAtual) {
-            document.querySelector(".evento-conteudo").innerHTML = evento.lista[i].conteudo;
-            return
+    const container = document.querySelector(".evento-conteudo");
+    const eventos = evento.lista;
+
+    for (const evento of eventos) {
+        if (evento.id == eventoAtual) {
+            container.innerHTML = evento.conteudo;
+            return;
         }
     }
 }

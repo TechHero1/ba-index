@@ -334,23 +334,28 @@ var minigames = {
 }
 
 function load_minigames() {
-    for (var i = 0; i < minigames.lista.length; i++) {
-      let cur_minigame_info = minigames.lista[i];
-      let minigame_links = "";
-      for (var im = 0; im < cur_minigame_info.links.length; im++) {
-        minigame_links += `<a class="text-blue-500" href="${cur_minigame_info.links[im].url}">${cur_minigame_info.links[im].label}</a>`;
-      }
+    const container = document.querySelector(".minigames-container");
+    const all_minigames = minigames.lista;
+    const cards = [];
 
-      document.querySelector(".minigames-container").innerHTML += `
-        <div class="flex flex-col gap-2">
-          <div>
-            <span>${cur_minigame_info.name}</span><br>
-            <i>${cur_minigame_info.event}</i>
-          </div>
-          <div class="flex flex-col">
-            ${minigame_links}
-          </div>
-        </div>
-      `;
+    for (const minigame of all_minigames) {
+        let minigame_links = "";
+        for (const link of minigame.links) {
+            minigame_links += `<a class="text-blue-500" href="${link.url}">${link.label}</a>`;
+        }
+
+        cards.push(`
+            <div class="flex flex-col gap-2">
+              <div>
+                <span>${minigame.name}</span><br>
+                <i>${minigame.event}</i>
+              </div>
+              <div class="flex flex-col">
+                ${minigame_links}
+              </div>
+            </div>
+        `);
     }
+
+    container.innerHTML = cards.join("");
 }
