@@ -341,7 +341,7 @@ function load_minigames() {
     for (const minigame of all_minigames) {
         let minigame_links = "";
         for (const link of minigame.links) {
-            minigame_links += `<a class="text-blue-500" href="${link.url}">${link.label}</a>`;
+            minigame_links += `<a class="text-blue-500 hover:underline" href="${link.url}">${link.label}</a>`;
         }
 
         cards.push(`
